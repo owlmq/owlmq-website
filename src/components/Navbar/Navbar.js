@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+import "./Navbar.css";
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(
@@ -41,9 +44,14 @@ const Navbar = () => {
                     <Link className="hover:text-gray-500 p-2 rounded text-textcolor font-bold" to="/blog">Blog</Link>
                     <Link className="hover:text-gray-500 p-2 rounded text-textcolor font-bold" to="/about">About</Link>
                     <button
+                        className="p-2 rounded-full min-w-10 dark:min-w-10">
+                        <a href="https://github.com/owlmq" target="_blank">
+                            <FontAwesomeIcon icon={faGithub} size="lg" />
+                        </a>
+                    </button>
+                    <button
                         onClick={() => setDarkMode(!darkMode)}
-                        className="p-2 rounded-full min-w-10 dark:min-w-10 bg-background dark:bg-background"
-                    >
+                        className="p-2 rounded-full min-w-10 dark:min-w-10 bg-background dark:bg-background">
                         {darkMode ? <FontAwesomeIcon icon={faSun} size="lg" /> : <FontAwesomeIcon icon={faMoon} size="lg" />}
                     </button>
                 </div>
