@@ -20,6 +20,7 @@ jobs:
       run: |
         cd public
         git init
+        git config --global --add safe.directory /github/workspace/public
         git add -A
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
