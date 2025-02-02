@@ -1,5 +1,3 @@
-import logo from '../logo.png';
-
 const Home = () => {
      return (
          <div className="text-textcolor dark:text-textcolor">
@@ -16,7 +14,7 @@ const Home = () => {
                          paddingTop: '90px'
                      }}
                  >
-                     <img src={logo} alt="Logo" />
+                     <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
                  </div>
              </p>
          </div>
