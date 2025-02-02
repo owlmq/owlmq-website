@@ -30,6 +30,7 @@ jobs:
     permissions:
       id-token: write  # Fügt die erforderliche Berechtigung für OIDC hinzu
       contents: read    # Falls du Repository-Inhalte benötigst
+      pages: write    # Erlaubt das Schreiben für GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
