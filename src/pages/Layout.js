@@ -1,32 +1,16 @@
-import { Outlet, Link } from "react-router-dom";
-
-//import logo from '../logo.png';
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
 
 const Layout = () => {
-  return (
-    <>
-      <nav>
-          <div className="logo">
-              <Link to="/">
-                  todo:)
-              </Link>
-          </div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+    return (
+        <>
+            <Navbar />
 
-      <Outlet />
-    </>
-  )
+            <div className="bg-background h-full">
+                <Outlet />
+            </div>
+        </>
+    )
 };
 
 export default Layout;

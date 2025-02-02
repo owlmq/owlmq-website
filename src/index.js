@@ -6,6 +6,8 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import NoPage from "./pages/NoPage";
 
+import "./index.css";
+
 export default function App() {
   return (
     <BrowserRouter>
