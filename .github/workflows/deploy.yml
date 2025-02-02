@@ -27,9 +27,12 @@ jobs:
 
   # Deployment job
   deploy:
+    permissions:
+      id-token: write  # Fügt die erforderliche Berechtigung für OIDC hinzu
+      contents: read    # Falls du Repository-Inhalte benötigst
     environment:
       name: github-pages
-      url: owlmq.github.io
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
