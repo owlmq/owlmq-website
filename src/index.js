@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
+import Docs from "./pages/Docs";
 import NoPage from "./pages/NoPage";
 
 import "./index.css";
@@ -16,6 +17,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="blog" element={<Blog />} />
           <Route path="about" element={<About />} />
+          <Route path="docs" element={<Docs />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

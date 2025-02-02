@@ -35,12 +35,14 @@ const Navbar = () => {
             <div className="flex items-center">
                 {/* Logo */}
                 <div className="text-xl justify-start font-semibold w-1/6">
-                    <a href="#">MyLogo</a>
+                    <Link to="/">
+                        <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" className="h-[50px]"/>
+                    </Link>
                 </div>
 
                 {/* Desktop Links */}
                 <div className="hidden justify-end w-5/6 md:flex space-x-6">
-                    <Link className="hover:text-gray-500 p-2 rounded text-textcolor font-bold" to="/">Home</Link>
+                    <Link className="hover:text-gray-500 p-2 rounded text-textcolor font-bold" to="/docs">Docs</Link>
                     <Link className="hover:text-gray-500 p-2 rounded text-textcolor font-bold" to="/blog">Blog</Link>
                     <Link className="hover:text-gray-500 p-2 rounded text-textcolor font-bold" to="/about">About</Link>
                     <button
